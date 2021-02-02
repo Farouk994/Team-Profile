@@ -105,3 +105,38 @@ function promptUser(answers) {
         });
 
 };
+
+function generateHTML() {
+    // put html here
+    
+    console.log(teamArray)
+
+    function renderManager() {
+
+    };
+    function renderIntern() {
+
+    };
+    function renderEngineer() {
+
+    };
+
+};
+
+function addUser(x){
+    inquirer.prompt([
+        {   
+            name: "continue",
+            message: "Do you want to add another team member?",
+            type: "confirm"
+        }
+    ]).then(function(confirmRes){
+        confirmRes.continue ? promptUser() : generateHTML()
+    })
+};
+
+
+
+
+promptUser();
+
